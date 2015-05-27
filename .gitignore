@@ -1,0 +1,9 @@
+#Exclude the build directory
+target/*
+
+# Exclude class file
+*.class
+
+#Exclude jar file
+*.jar
+
