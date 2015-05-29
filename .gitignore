@@ -7,3 +7,11 @@ target/*
 #Exclude jar file
 *.jar
 
+#Exclude metadata
+.metadata/*
+
+/build/
+/target/
+/target/
+/target/
+/target/

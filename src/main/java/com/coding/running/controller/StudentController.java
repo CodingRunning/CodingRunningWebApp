@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.coding.running.model.Student;
 import com.coding.running.service.IStudentService;
-import com.coding.running.service.impl.StudentService;
 
 @Controller
 public class StudentController {
