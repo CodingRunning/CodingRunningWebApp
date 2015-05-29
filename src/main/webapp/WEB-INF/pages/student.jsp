@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ include file="/WEB-INF/jsp/includes.jsp"%>
+<%@ include file="/WEB-INF/pages/includes.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,13 +9,11 @@
 <title>Student Management</title>
 </head>
 <body>
+
 <h1>Students Data</h1>
 <form:form action="student.do" method="POST" commandName="student">
-<h3><spring:message code="student.title.studentid"></spring:message></h3><span style="float: right;">  
-    <a href="?lang=en">en</a>  
-    |  
-    <a href="?lang=th">th</a>  
-</span>  
+<h3><spring:message code="student.title.studentid"></spring:message></h3>
+
 	<table>
 		<tr>
 			<td>Student ID</td>
