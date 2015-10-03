@@ -6,6 +6,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+$( document ).ready(function() {
+	
+});
+</script>
 <title>Student Management</title>
 </head>
 <body>
@@ -13,33 +18,57 @@
 <h1>Students Data</h1>
 <form:form action="student.do" method="POST" commandName="student">
 <h3><spring:message code="student.title.studentid"></spring:message></h3>
-
-	<table>
-		<tr>
-			<td>Student ID</td>
-			<td><form:input path="studentId" /></td>
-		</tr>
-		<tr>
-			<td>First name</td>
-			<td><form:input path="firstName" /></td>
-		</tr>
-		<tr>
-			<td>Last name</td>
-			<td><form:input path="lastName" /></td>
-		</tr>
-		<tr>
-			<td>Year Level</td>
-			<td><form:input path="age" /></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<input type="submit" name="action" value="Add" />
+	
+	<div class="row">
+	<div class="col-md-12">
+		<div style="margin-top:10px;"></div>
+			<div class="row">
+				<div class="col-md-3">
+				<strong>Student ID</strong>
+				</div>
+				<div class="col-md-4">
+					<form:input path="studentId" class='form-control'/>
+				</div>
+			</div>
+			
+			<div style="margin-top:10px;"></div>
+			<div class="row">
+				<div class="col-md-3">
+				<strong>First name</strong>
+				</div>
+				<div class="col-md-4">
+					<form:input path="firstName" class='form-control'/>
+				</div>
+			</div>
+		
+			<div style="margin-top:10px;"></div>
+			<div class="row">
+				<div class="col-md-3">
+				<strong>Last name</strong>
+				</div>
+				<div class="col-md-4">
+					<form:input path="lastName" class='form-control'/>
+				</div>
+			</div>
+		
+			<div style="margin-top:10px;"></div>
+			<div class="row">
+				<div class="col-md-3">
+				<strong>Age</strong>
+				</div>
+				<div class="col-md-4">
+					<form:input path="age" class='form-control'/>
+				</div>
+			</div>
+		
+			
+				<input type="submit" class="btn btn-default btn-primary" name="action" value="Add" />
 				<input type="submit" name="action" value="Edit" />
 				<input type="submit" name="action" value="Delete" />
 				<input type="submit" name="action" value="Search" />
-			</td>
-		</tr>
-	</table>
+			</div>
+			</div>
+	
 </form:form>
 <br>
 <table border="1">

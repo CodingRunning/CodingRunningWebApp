@@ -14,8 +14,47 @@
 
 <!-- This contains the most used tag libraries -->
 
+<script type="text/javascript">
+$( document ).ready(function() {
+	jQuery('#langEn').click(function(){
+		$.ajax ({ 
+			type: "POST",
+			url: "ajax/changelanguage.do", 
+			data: { new_lang: "en"},
+			async: false, 
+			traditional : true,
+			error: function (data, error) {alert ("change language error!");}, 
+			success: function (data) 
+			{ 
+			window.location.reload (); 
+			} 
+	});
+	});
+	
+	jQuery('#langTh').click(function(){
+		$.ajax ({
+			type: "POST",
+			headers : {
+				Accept : "application/json; charset=utf-8",
+				"Content-Type" : "application/json; charset=utf-8"
+			},
+			url: "ajax/test", 
+		    success: function(data) { 
+		        alert(data.firstName +" " + data.lastName);
+		    },
+		    error:function(data,status,er) { 
+		        alert("Error.");
+		    }
+	});
+	});
+});
+	
+
+
+</script>
+
 <span style="float: right;">  
-    <a href="?lang=en">en</a>  
+    <a href="#" id="langEn">en</a>  
     |  
-    <a href="?lang=th">th</a>  
+    <a href="#" id="langTh">th</a>  
 </span>  
